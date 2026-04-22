@@ -14,7 +14,7 @@ $$
 Общее количество разбиений числа $n$ на различные нечетные части получается суммированием по всем допустимым $k$:
 
 $$
-r(n) = \sum_{\begin{subarray}{l} 
+r(n) = \sum_{\begin{subarray}{c} 
     k=1 \\ 
     n \equiv k \pmod{2}
 \end{subarray}}^{\lfloor \sqrt{n} \rfloor} r(n, k).
