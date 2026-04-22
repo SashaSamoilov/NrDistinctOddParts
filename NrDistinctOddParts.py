@@ -84,12 +84,12 @@ def measure_time():
             t1_str = f"{t1:.3f}"
         except RecursionError:
             t1_str = "-"
-            
+
         t2 = timeit.timeit(lambda: distinct_odd_parts(n), number=10) / 10
         t3 = timeit.timeit(lambda: restrict_parts(n), number=10) / 10
         
         res = restrict_parts(n)
-        print(f"{n}\t\t{t1_str}\t\t{t2:.3f}\t\t{t3:.3f}\t\t{res}")
+        print(f"{n}\t\t{t1_str}\t\t\t{t2:.3f}\t\t\t{t3:.3f}\t\t\t{res}")
 
 test_correctness(250, 500)
 measure_time()
