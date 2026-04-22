@@ -35,7 +35,7 @@ def restrict_parts_by_k(n, k):
 def distinct_odd_parts_naive(n):
     # Количество разбиений n на различные нечетные части (простой алгоритм)
     result = 0
-    kbound = int(math.isqrt(n))
+    kbound = math.isqrt(n)
     for k in range(1, kbound + 1):
         if (n - k) % 2 == 0:
             result += nr_rec_distinct_odd_by_k(n, k)
@@ -44,7 +44,7 @@ def distinct_odd_parts_naive(n):
 def distinct_odd_parts(n):
     # Количество разбиений n на различные нечетные части
     result = 0
-    kbound = int(math.isqrt(n))
+    kbound = math.isqrt(n)
     for i in range(1, kbound + 1):
         if (n - i) % 2 == 0:
             result += distinct_odd_parts_by_k(n, i)
@@ -53,7 +53,7 @@ def distinct_odd_parts(n):
 def restrict_parts(n):
     # Количество разбиений n на различные нечетные части (через биекцию)
     result = 0
-    kbound = int(math.isqrt(n))
+    kbound = math.isqrt(n)
     for i in range(1, kbound + 1):
         if (n - i) % 2 == 0:
             result += restrict_parts_by_k((n - i * i) // 2, i)
